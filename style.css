@@ -1,0 +1,87 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: monospace !important;
+  background-color: #28a745;
+  color: #fff;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.context-menu {
+  z-index: 1200;
+  display: none;
+  user-select: none;
+  flex-direction: column;
+  position: fixed;
+  min-width: 180px;
+  padding: 5px;
+  background-color: #333;
+  border-radius: 5px;
+}
+.context-menu.show {
+  display: flex;
+}
+.context-menu .menu-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+.context-menu .menu-head img {
+  width: 2rem;
+  border-radius: 50%;
+}
+.context-menu .menu-head p {
+  margin-left: 0.2rem;
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+.context-menu .button-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+  background-color: transparent;
+}
+.context-menu .button-container > button {
+  transition: all 0.3s ease;
+  outline: none !important;
+  width: 100%;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  background-color: transparent;
+  border-color: transparent;
+  color: #fff;
+}
+.context-menu .button-container > button:last-of-type {
+  margin-bottom: 0;
+}
+.context-menu .button-container > button:hover {
+  cursor: pointer;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+/* This isn't required for the context-menu*/
+.wrapper h2 {
+  width: 60%;
+}
+@media (max-width: 1200px) {
+  .wrapper h2 {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
